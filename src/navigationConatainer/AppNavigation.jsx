@@ -14,12 +14,12 @@ const AppNavigation = () => {
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={() => ({
-          headerShown: false, // This will hide the header
+          headerShown: false, 
           tabBarStyle: {
             backgroundColor: 'black',
             borderTopWidth: 0,
             elevation: 0,
-            height:'10%' 
+            height:'9%' 
           },
         })}>
         <Tab.Screen
@@ -30,7 +30,7 @@ const AppNavigation = () => {
               <VectorIcon
                 type="Entypo"
                 name="home"
-                size={20}
+                size={25}
                 color={Colors.white}
               />
             ),
@@ -42,9 +42,9 @@ const AppNavigation = () => {
           options={{
             tabBarIcon: () => (
               <VectorIcon
-                type="Entypo"
-                name="home"
-                size={20}
+                type="MaterialCommunityIcons"
+                name="hand-heart"
+                size={25}
                 color={Colors.white}
               />
             ),
@@ -56,9 +56,9 @@ const AppNavigation = () => {
           options={{
             tabBarIcon: () => (
               <VectorIcon
-                type="Entypo"
-                name="home"
-                size={20}
+                type="Ionicons"
+                name="notifications"
+                size={25}
                 color={Colors.white}
               />
             ),
