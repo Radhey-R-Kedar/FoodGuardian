@@ -1,9 +1,9 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import AppNavigation from './src/navigationConatainer/AppNavigation'
+import StartNavigation from './src/navigationConatainer/StartNavigation'
 
 const App = () => {
-  return <AppNavigation/>
+  return <StartNavigation/>
   
 }
 

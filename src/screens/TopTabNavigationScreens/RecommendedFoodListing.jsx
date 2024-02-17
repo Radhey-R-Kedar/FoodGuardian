@@ -1,10 +1,11 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import HotelCard from '../../components/TopTsbNavigationComponents/HotelCard'
 
 const RecommendedFoodListing = () => {
   return (
-    <View>
-      <Text className="text-black">RecommendedFoodListing</Text>
+    <View className="flex-1 p-2 items-center pt-4">
+      <HotelCard/>
     </View>
   )
 }

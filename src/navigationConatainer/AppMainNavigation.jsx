@@ -1,17 +1,18 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
+import { View, Text } from 'react-native'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/HomeScreen';
-import FindDonorsScreen from '../screens/FindDonorsScreen';
+import DonorsScreen from '../screens/DonorsScreen';
 import Notification from '../screens/Notification';
 import VectorIcon from '../utils/VectorIcon';
 import {Colors} from '../themes/Colors';
 
 const Tab = createBottomTabNavigator();
 
-const AppNavigation = () => {
+const AppMainNavigation = (props) => {
+  let provider = props.route.params.provider;
   return (
-    <NavigationContainer>
+   
       <Tab.Navigator
         screenOptions={() => ({
           headerShown: false, 
@@ -24,28 +25,37 @@ const AppNavigation = () => {
         })}>
         <Tab.Screen
           name="Home"
-          component={HomeScreen}
           options={{
-            tabBarIcon: () => (
+            tabBarLabel: ({focused}) => (
+              <Text style={{ color: focused ? Colors.yellow : Colors.white }} className="font-bold">
+                Home
+              </Text>
+            ),
+            tabBarIcon: ({focused}) => (
               <VectorIcon
                 type="Entypo"
                 name="home"
                 size={25}
-                color={Colors.white}
+                color={focused?Colors.yellow:Colors.white}
               />
             ),
           }}
-        />
+        >{(props) => <HomeScreen {...props} provider={provider}/>}</Tab.Screen>
         <Tab.Screen
-          name="FindDonors"
-          component={FindDonorsScreen}
+          name={provider==1?"My Donations":"Find Donors"}
+          component={DonorsScreen}
           options={{
-            tabBarIcon: () => (
+            tabBarLabel: ({focused}) => (
+              <Text style={{ color: focused ? Colors.yellow : Colors.white }} className="font-bold">
+                {provider==1?"My Donations":"Find Donors"}
+              </Text>
+            ),
+            tabBarIcon: ({focused}) => (
               <VectorIcon
                 type="MaterialCommunityIcons"
                 name="hand-heart"
                 size={25}
-                color={Colors.white}
+                color={focused?Colors.yellow:Colors.white}
               />
             ),
           }}
@@ -54,19 +64,24 @@ const AppNavigation = () => {
           name="Notification"
           component={Notification}
           options={{
-            tabBarIcon: () => (
+            tabBarLabel: ({focused}) => (
+              <Text style={{ color: focused ? Colors.yellow : Colors.white }} className="font-bold">
+                Notification
+              </Text>
+            ),
+            tabBarIcon: ({focused}) => (
               <VectorIcon
                 type="Ionicons"
                 name="notifications"
                 size={25}
-                color={Colors.white}
+                color={focused?Colors.yellow:Colors.white}
               />
             ),
           }}
         />
       </Tab.Navigator>
-    </NavigationContainer>
+
   );
 };
 
-export default AppNavigation;
+export default AppMainNavigation;

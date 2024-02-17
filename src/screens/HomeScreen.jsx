@@ -14,17 +14,14 @@ const {width, height}=Dimensions.get('screen');
 
 const Tab = createMaterialTopTabNavigator();
 
-const HomeScreen = () => {
-
-  const [provider, setProvider] = useState(true)
-
+const HomeScreen = (props) => {
   return (
     <View className='flex flex-1'>
-      <Provider name = {provider?"Provider":"Receiver"}/>
+      <Provider name = {props.provider==1?"Food Provider":"Receiver"}/>
       <Header />
       
       <Tab.Navigator>
-      {provider?(<>
+      {props.provider==1?(<>
         <Tab.Screen name="Donation Summary" component={DonationSummary} />
       <Tab.Screen name="Food Request" component={FoodRequest} />
       </>
