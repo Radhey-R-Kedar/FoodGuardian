@@ -26,7 +26,7 @@ const DonationSummary = () => {
         </Text>
         <Text className="text-gray font-extrabold text-lg text-center "> No One Goes <Text className="text-black font-extrabold">Hungry</Text></Text>
       </View>
-      <AddButton setShowModal={setShowModal} />
+      <AddButton setShowModal={setShowModal} text="Donate Food"/>
       <MyForm showModal={showModal} setShowModal={setShowModal}/>
     </View>
   );

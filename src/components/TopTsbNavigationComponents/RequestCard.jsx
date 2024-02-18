@@ -3,7 +3,7 @@ import React from 'react';
 import FoodRequestImg from '../../assets/FoodRequestImage.png';
 const RequestCard = () => {
   return (
-    <View className="w-[95%] h-[45%] m-[2.5%]">
+    <View className="w-[95%] h-60 m-[2.5%]">
       <Text className="text-lightGray text-right mr-1 text-xs mb-1">
         30 min ago
       </Text>

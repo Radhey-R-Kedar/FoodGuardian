@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "960447941276",
+    "project_id": "foodguardian-ba1f5",
+    "storage_bucket": "foodguardian-ba1f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:960447941276:android:be97733cdab1f9cd65bb59",
+        "android_client_info": {
+          "package_name": "com.foodguardian"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "960447941276-lbvl4k2gjjg5bgle2jr6jpf52f2179t1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp2XUd9aFYLH1HY_OcyW67aqgAXIVR-gs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "960447941276-lbvl4k2gjjg5bgle2jr6jpf52f2179t1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

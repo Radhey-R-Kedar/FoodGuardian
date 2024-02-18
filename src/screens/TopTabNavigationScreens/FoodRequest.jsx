@@ -7,7 +7,7 @@ const FoodRequest = () => {
   return (
     <View className="flex-1 p-1 bg-white">
       <FoodRequestContainer/>
-      <AddButton/>
+      <AddButton text="Donate Food"/>
     </View>
   )
 }
